@@ -1,0 +1,43 @@
+# =====================================================
+# PYPROJECT.TOML - UV Package Manager Configuration
+# =====================================================
+# Defines all project dependencies in one place
+# UV reads this and installs exact versions
+
+[project]
+name = "rag-app"
+version = "0.1.0"
+description = "Simple RAG app for Rainbow Bazaar returns PDF"
+requires-python = ">=3.11"
+
+dependencies = [
+    # Backend Web Framework
+    "fastapi==0.109.0",
+    "uvicorn==0.27.0",
+    
+    # Frontend
+    "streamlit==1.40.1",
+    "requests==2.32.5",
+    
+    # LangChain RAG Stack
+    "langchain==1.2.3",
+    "langchain-core==1.2.7",
+    "langchain-community==0.4.1",
+    "langchain-text-splitters==1.1.0",
+    
+    # OpenAI Integration
+    "openai==2.14.0",
+    
+    # Vector Database
+    "faiss-cpu==1.13.2",
+    
+    # PDF Processing
+    "pypdf==6.6.0",
+    
+    # Environment Variables
+    "python-dotenv==1.2.2",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
